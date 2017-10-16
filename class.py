@@ -227,8 +227,8 @@ def subsetsum(list, int):
                     break
         if res == True:
             break
-    if res == True:
-        break
+    #if res == True:
+       # break
     return res
 
 #notes
@@ -241,3 +241,20 @@ def contains3(l,x):
         i = i + 1
     return found
     #use a while loop when you don't know how many times you have to run something
+def merge(l1,l2):
+    'l1:list(str), l2:list(str), return:list(str)'
+    i = 0
+    j = 0
+    list = []
+    while(True):
+        if l1[i] < l2[j]:
+            list = list + [l1[i]]
+            i = i + 1
+        else:
+            list = list + [l2[j]]
+            j = j+ 1
+        if (j)+ (i) == len(list):
+            break
+    print(list)
+merge([1,4,7,9],[2,5,8])
+
