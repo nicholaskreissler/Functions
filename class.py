@@ -253,7 +253,7 @@ def merge(l1,l2):
         else:
             list = list + [l2[j]]
             j = j+ 1
-        if (j)+ (i) == len(list):
+        if (j)+ (i) == len(l1) + len(l2):
             break
     print(list)
 merge([1,4,7,9],[2,5,8])
