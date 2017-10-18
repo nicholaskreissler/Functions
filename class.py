@@ -397,22 +397,22 @@ def contains3(l,x):
 
 def merge(l1,l2):
     'l1:list(str), l2:list(str), return:list(str)'
-    i = 0
-    j = 0
-    l = []
+    i,j,l = 0,0,[]
     while(True):
         if l1[i] < l2[j]:
             l += [l1[i]]
             i += 1
             if i == len(l1):
                 l += l2[j:len(l2)]
+                return l
         else:
             l += [l2[j]]
             j += 1
             if j == len(l2):
                 l += l1[i:len(l1)]
-        if len(l) == len(l1) + len(l2):
-            return l
+                return l
+
+merge([1,3,5,7,9],[2,4,6,8])
 
 #assignment 6 is last ten questions of the lab
 #quiz three october 25
