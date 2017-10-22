@@ -431,3 +431,10 @@ def remove_duplicate(alist):
                 
     return alist
 
+def remove_duplicate(list):
+    lists = [[],[]]
+    for i in range(len(list)):
+        for j in range(len(list[i])):
+            if list[i][j] not in lists[i]:
+                lists[i].append(list[i][j])
+    return lists as list
