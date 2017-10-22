@@ -424,6 +424,10 @@ def getaposnumber():
         if x > 0:
             ret = False
 
+def remove_duplicate(alist):
+    for i in range(len(alist)):
+        for item in alist[i]:
+            alist[i] = list(set(alist[i]))
+                
+    return alist
 
-
-getaposnumber()
